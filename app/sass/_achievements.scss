@@ -1,0 +1,111 @@
+.achievements {
+  padding: 30px 0 0 0;
+  background-color: $grey-bg;
+
+  &__head {
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: $main;
+  }
+
+  &__carousel {
+    width: 100%;
+    display: inline-block;
+    padding: 30px 0;
+    border-bottom: 2px solid $grey-separator;
+
+    &-circle {
+      display: none;
+    }
+
+    &-img {
+      width: 100%;
+      display: flex;
+      
+
+      &-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 25px 0;
+        width: 25%;
+        background: $basic-white;
+
+        &>img {
+          height: 60px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .achievements__carousel-img-item>img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .achievements {
+    &__carousel {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+
+      border-bottom: 2px solid $grey-separator;
+
+      &-circle {
+        margin: 30px -14px 30px 0;
+        display: flex;
+
+        &-item {
+          width: 16px;
+          height: 16px;
+          background-color: $active-regular;
+          border-radius: 50%;
+          opacity: 0.2;
+          margin-right: 14px;
+
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+
+      &-img {
+        width: 100%;
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+
+        &-item {
+          scroll-snap-align: start;
+          flex-shrink: 0;
+
+          border-radius: 12px;
+          padding: 25px 0;
+          width: 100%;
+
+          background: $basic-white;
+          transform-origin: center center;
+          transform: scale(1);
+          transition: transform 0.5s;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

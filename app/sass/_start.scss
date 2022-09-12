@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.body {
+  font-family: 'Montserrat', 'Lucida Grande', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  margin: 0 auto;
+
+  max-width: 1380px;
+  min-width: 375px;
+  padding: 0 30px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 1440px;
+    padding: 0 60px;
+  }
+}
